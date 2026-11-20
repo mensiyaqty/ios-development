@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nvC-tr-001">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Travel Wishlist-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" allowsSelection="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="91" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tbl-Vw-001">
+                                <rect key="frame" x="0.0" y="155" width="393" height="663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FavoriteCell" id="cel-Fv-001" customClass="FavoriteCell" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="91"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cel-Fv-001" id="cvw-Fv-001">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <!-- Image: fixed 96 x 64 -->
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag_japan" translatesAutoresizingMaskIntoConstraints="NO" userLabel="Item Image" id="img-Fv-001">
+                                                    <rect key="frame" x="16" y="13.666666666666664" width="96" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="96" id="imW-Cn-001"/>
+                                                        <constraint firstAttribute="height" constant="64" id="imH-Cn-001"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <!-- Outer vertical stack: title, subtitle, rating -->
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" userLabel="Text Stack" id="stk-Fv-001">
+                                                    <rect key="frame" x="124" y="12" width="253" height="67"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttl-Fv-001">
+                                                            <rect key="frame" x="0.0" y="0.0" width="253" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <color key="textColor" systemColor="labelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sub-Fv-001">
+                                                            <rect key="frame" x="0.0" y="26.333333333333332" width="253" height="18"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <!-- Rating: horizontal stack of 5 SF Symbol image views + flexible spacer -->
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" userLabel="Rating Stack" id="rat-Fv-001">
+                                                            <rect key="frame" x="0.0" y="50.333333333333336" width="253" height="16.666666666666664"/>
+                                                            <subviews>
+<imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" userLabel="Star 1" id="st1-Fv-001">
+    <rect key="frame" x="0" y="0.66666666666666696" width="17" height="15.666666666666666"/>
+    <color key="tintColor" systemColor="systemOrangeColor"/>
+    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="14"/>
+</imageView>
+<imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" userLabel="Star 2" id="st2-Fv-001">
+    <rect key="frame" x="19" y="0.66666666666666696" width="17" height="15.666666666666666"/>
+    <color key="tintColor" systemColor="systemOrangeColor"/>
+    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="14"/>
+</imageView>
+<imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" userLabel="Star 3" id="st3-Fv-001">
+    <rect key="frame" x="38" y="0.66666666666666696" width="17" height="15.666666666666666"/>
+    <color key="tintColor" systemColor="systemOrangeColor"/>
+    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="14"/>
+</imageView>
+<imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" userLabel="Star 4" id="st4-Fv-001">
+    <rect key="frame" x="57" y="0.66666666666666696" width="17" height="15.666666666666666"/>
+    <color key="tintColor" systemColor="systemOrangeColor"/>
+    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="14"/>
+</imageView>
+<imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" userLabel="Star 5" id="st5-Fv-001">
+    <rect key="frame" x="76" y="0.66666666666666696" width="17" height="15.666666666666666"/>
+    <color key="tintColor" systemColor="systemOrangeColor"/>
+    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="14"/>
+</imageView>
+                                                                <view contentMode="scaleToFill" horizontalHuggingPriority="1" horizontalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" userLabel="Spacer" id="spc-Fv-001">
+                                                                    <rect key="frame" x="95" y="0.0" width="158" height="16.666666666666664"/>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="img-Fv-001" firstAttribute="leading" secondItem="cvw-Fv-001" secondAttribute="leading" constant="16" id="imL-Cn-001"/>
+                                                <constraint firstItem="img-Fv-001" firstAttribute="centerY" secondItem="cvw-Fv-001" secondAttribute="centerY" id="imC-Cn-001"/>
+                                                <constraint firstItem="img-Fv-001" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cvw-Fv-001" secondAttribute="top" constant="12" id="imT-Cn-001"/>
+                                                <constraint firstItem="stk-Fv-001" firstAttribute="leading" secondItem="img-Fv-001" secondAttribute="trailing" constant="12" id="skL-Cn-001"/>
+                                                <constraint firstAttribute="trailing" secondItem="stk-Fv-001" secondAttribute="trailing" constant="16" id="skR-Cn-001"/>
+                                                <constraint firstItem="stk-Fv-001" firstAttribute="top" secondItem="cvw-Fv-001" secondAttribute="top" constant="12" id="skT-Cn-001"/>
+                                                <constraint firstAttribute="bottom" secondItem="stk-Fv-001" secondAttribute="bottom" constant="12" priority="999" id="skB-Cn-001"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="itemImageView" destination="img-Fv-001" id="oIm-Fv-001"/>
+                                            <outlet property="titleLabel" destination="ttl-Fv-001" id="oTl-Fv-001"/>
+                                            <outlet property="subtitleLabel" destination="sub-Fv-001" id="oSb-Fv-001"/>
+                                            <outlet property="star1" destination="st1-Fv-001" id="oS1-Fv-001"/>
+                                            <outlet property="star2" destination="st2-Fv-001" id="oS2-Fv-001"/>
+                                            <outlet property="star3" destination="st3-Fv-001" id="oS3-Fv-001"/>
+                                            <outlet property="star4" destination="st4-Fv-001" id="oS4-Fv-001"/>
+                                            <outlet property="star5" destination="st5-Fv-001" id="oS5-Fv-001"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tbl-Vw-001" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tbT-Cn-001"/>
+                            <constraint firstItem="tbl-Vw-001" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tbL-Cn-001"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tbl-Vw-001" secondAttribute="trailing" id="tbR-Cn-001"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tbl-Vw-001" secondAttribute="bottom" id="tbB-Cn-001"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Travel Wishlist" largeTitleDisplayMode="always" id="nvI-tm-001"/>
+                    <connections>
+                        <outlet property="tableView" destination="tbl-Vw-001" id="oTb-Vc-001"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="-28"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nvS-cn-001">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nvC-tr-001" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="nvB-ar-001">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sgR-ot-001"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfR-sp-001" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-650" y="-28"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flag_japan" width="600" height="400"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
