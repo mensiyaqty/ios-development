@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <!-- ROOT STACK: vertical, fill, spacing 32 -->
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" userLabel="Root Stack" id="rst-Sk-001">
+                                <rect key="frame" x="20" y="167.66666666666666" width="353" height="541.66666666666663"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover_neon_drive" translatesAutoresizingMaskIntoConstraints="NO" userLabel="Cover" id="cov-Im-001">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="353"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cov-Im-001" secondAttribute="height" multiplier="1:1" id="asp-Cn-001"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <!-- LABELS STACK: vertical, fill, spacing 6 -->
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" userLabel="Labels Stack" id="lbl-Sk-001">
+                                        <rect key="frame" x="0.0" y="385" width="353" height="58.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsFontSizeToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttl-Lb-001">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="31.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="art-Lb-001">
+                                                <rect key="frame" x="0.0" y="37.333333333333314" width="353" height="21.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.72" green="0.7" blue="0.8" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <!-- CONTROLS STACK: horizontal, fillEqually, center, spacing 16 -->
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" userLabel="Controls Stack" id="ctl-Sk-001">
+                                        <rect key="frame" x="0.0" y="475.66666666666669" width="353" height="66"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prv-Bt-001">
+    <rect key="frame" x="0" y="11.0" width="107.0" height="44"/>
+    <accessibility key="accessibilityConfiguration" label="Previous"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <state key="normal" image="backward.fill"/>
+    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
+    <connections>
+        <action selector="previousTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="prv-Bt-001-act"/>
+    </connections>
+</button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ply-Bt-001">
+    <rect key="frame" x="123.0" y="0.0" width="107.0" height="66"/>
+    <accessibility key="accessibilityConfiguration" label="Play"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <state key="normal" image="play.fill"/>
+    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+    <connections>
+        <action selector="playPauseTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ply-Bt-001-act"/>
+    </connections>
+</button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxt-Bt-001">
+    <rect key="frame" x="246.0" y="11.0" width="107.0" height="44"/>
+    <accessibility key="accessibilityConfiguration" label="Next"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <state key="normal" image="forward.fill"/>
+    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
+    <connections>
+        <action selector="nextTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nxt-Bt-001-act"/>
+    </connections>
+</button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.07" green="0.06" blue="0.11" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rst-Sk-001" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rlc-Cn-001"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rst-Sk-001" secondAttribute="trailing" constant="20" id="rtc-Cn-001"/>
+                            <constraint firstItem="rst-Sk-001" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="rcy-Cn-001"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coverImageView" destination="cov-Im-001" id="out-Cv-001"/>
+                        <outlet property="titleLabel" destination="ttl-Lb-001" id="out-Tl-001"/>
+                        <outlet property="artistLabel" destination="art-Lb-001" id="out-Ar-001"/>
+                        <outlet property="playPauseButton" destination="ply-Bt-001" id="out-Pp-001"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="-28"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backward.fill" catalog="system" width="128" height="77"/>
+        <image name="cover_neon_drive" width="800" height="800"/>
+        <image name="forward.fill" catalog="system" width="128" height="77"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+    </resources>
+</document>
